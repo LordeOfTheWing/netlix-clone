@@ -2,7 +2,26 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/Header";
 
-const Home: NextPage = () => {
+interface Props {
+  netflixOriginals: Movie[];
+  actionMovies: Movie[];
+  comedyMovies: Movie[];
+  documentaries: Movie[];
+  horrorMovies: Movie[];
+  romanceMovies: Movie[];
+  topRated: Movie[];
+  trendingNow: Movie[];
+}
+
+const Home = ({
+  netflixOriginals,
+  actionMovies,
+  comedyMovies,
+  documentaries,
+  romanceMovies,
+  topRated,
+  trendingNow,
+}: Props) => {
   return (
     <div className='flex min-h-screen flex-col items-center justify-center py-2'>
       <Head>
