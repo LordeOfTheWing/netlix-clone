@@ -1,12 +1,15 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { Authprovider } from "../hooks/useAuth";
+import { RecoilRoot } from "recoil";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Authprovider>
-      <Component {...pageProps} />;
-    </Authprovider>
+    <RecoilRoot>
+      <Authprovider>
+        <Component {...pageProps} />;
+      </Authprovider>
+    </RecoilRoot>
   );
 }
 
